@@ -26,11 +26,12 @@
 }
 
 .nav-items-link{
-    margin-top:0.5rem;
+    margin-top:0.4rem;
     text-decoration:none;
-    color: #9a8e7e;
+    color: #4d4d4d;
     font-family: 'mark-simonson-bold';
 }
+
 
 .top-nav-items{
     margin:0;
@@ -59,4 +60,50 @@
 .left-nav>a>svg{
     margin-top: 0.5rem;
     height:1.2rem;
+}
+
+
+
+.right-nav{
+    position: fixed;
+    bottom:0;
+    right:0;
+    
+    padding: 5.7rem 2rem;
+   
+    rotate: -90deg;
+        
+    color: #9a8e7e;
+    font-family: 'alpino-bold';  
+    font-size:0.8rem;
+}
+.sound-btn{
+    color:#4d4d4d;
+    margin-right: 0.2rem;
+}
+.sound-btn:hover{
+    color:#9a8e7e;
+}
+
+
+/*  for the on off button */
+#sound-click-container{
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+#sound-on-off-container{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* align-items: center; */
+    /* margin-top: 0.5rem; */
+}
+
+
+
+#sound-off{
+    display: none;
 }
