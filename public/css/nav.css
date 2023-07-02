@@ -35,8 +35,8 @@
 
 .top-nav-items{
     margin:0;
-    font-family: 'alpino-bold';
     font-size: 0.8rem;
+    font-family: 'alpino-bold';
 }
 
 
@@ -69,7 +69,7 @@
     bottom:0;
     right:0;
     
-    padding: 5.7rem 2rem;
+    padding: 5.7rem 1rem;
    
     rotate: -90deg;
         
@@ -100,10 +100,12 @@
     overflow: hidden;
     /* align-items: center; */
     /* margin-top: 0.5rem; */
+    /* overflow:hidden; */
+    /* max-height: 1rem; */
 }
 
 
 
-#sound-off{
-    display: none;
-}
+/* #sound-off{ */
+/*     display: none; */
+/* } */
