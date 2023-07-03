@@ -28,7 +28,7 @@
 .nav-items-link{
     margin-top:0.4rem;
     text-decoration:none;
-    color: #4d4d4d;
+    color: var(--light-brown);
     font-family: 'mark-simonson-bold';
 }
 
@@ -38,6 +38,18 @@
     font-size: 0.8rem;
     font-family: 'alpino-bold';
 }
+
+.current{
+    color: var(--dark-brown);
+}
+.top-nav-double-container{
+    position: relative;
+    height:1rem;
+    clip-path:inset(0);
+}
+
+
+
 
 
 
@@ -69,20 +81,20 @@
     bottom:0;
     right:0;
     
-    padding: 5.7rem 1rem;
+    padding: 5.7rem 1.6rem;
    
     rotate: -90deg;
         
-    color: #9a8e7e;
+    color: var(--dark-brown);
     font-family: 'alpino-bold';  
     font-size:0.8rem;
 }
 .sound-btn{
-    color:#4d4d4d;
+    color:var(--light-brown);
     margin-right: 0.3rem;
 }
 .sound-btn:hover{
-    color:#9a8e7e;
+    color:var(--dark-brown);
 }
 
 
@@ -97,10 +109,8 @@
 #sound-on-off-container{
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 
 
-   clip-path: rect(10px, 20px, 30px, 40px);
 }
 
 #sound-click-container{
@@ -110,73 +120,3 @@
 
 }
 
-#sound-on:hover{
-    animation:hide-on 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
-}
-
-.hide-on{
-    animation:hide-on 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0s;
-}
-@keyframes hide-on{
-    0%{
-        transform: translate(0,0%);
-    }
-    100%{
-        transform: translate(0,-100%); 
-    }
-}
-
-
-
-/* .reveal-off{ */
-/*     animation: reveal-off 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0s; */
-/* } */
-/* .hide-off{ */
-/*     animation: hide-off 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0s; */
-/* } */
-/**/
-/* @keyframes reveal-off { */
-/*     0% { */
-/*         transform: translate(0,200%); */
-/*     } */
-/*     100% { */
-/*         transform: translate(0,100%); */
-/*     }    */
-/* } */
-/**/
-/* @keyframes hide-off { */
-/*     0% { */
-/*         transform: translate(0,-100%); */
-/*     } */
-/*     100% { */
-/*         transform: translate(0,-200%); */
-/*     }    */
-/* } */
-/**/
-/* .reveal-on{ */
-/*     /* display:block; */ */
-/*     animation: reveal-on 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0s; */
-/* } */
-/* .hide-on{ */
-/*     animation: hide-on 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0s; */
-/* } */
-/* @keyframes reveal-on { */
-/*     0% { */
-/*         transform: translate(0,100%); */
-/*     } */
-/*     100% { */
-/*         transform: translate(0,0%); */
-/*     }    */
-/* } */
-/**/
-/* @keyframes hide-on { */
-/*     0% { */
-/*         transform: translate(0,0%); */
-/*     } */
-/*     100% { */
-/*         transform: translate(0,100%); */
-/*     }    */
-/* } */
-/**/
-/**/
-/**/

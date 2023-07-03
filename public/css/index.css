@@ -1,15 +1,20 @@
 body, html{
     padding:0;
     margin:0;
-    /* box-sizing:border-box; */
     user-select: none;
-    background-color: #111011;
+    background-color: var(--body-bg);
 }
 @font-face{
     font-family: 'alpino-bold';
     src: url('../fonts/alpino-bold.woff');
 }
 
+/* //declare the colors variables */
+:root{
+    --dark-brown:#9a8e7e;
+    --light-brown:#4d4d4d;
+    --body-bg:#111011;
+}
 
 a{
     text-decoration:none;
@@ -20,7 +25,6 @@ a{
 .example::-webkit-scrollbar {
   display: none;
 }
-
 /* Hide scrollbar for IE, Edge and Firefox */
 .example {
   -ms-overflow-style: none;  /* IE and Edge */
