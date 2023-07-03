@@ -1,8 +1,8 @@
-body{
+body, html{
     padding:0;
     margin:0;
     /* box-sizing:border-box; */
-
+    user-select: none;
     background-color: #111011;
 }
 @font-face{

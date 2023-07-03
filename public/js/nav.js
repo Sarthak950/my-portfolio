@@ -1,23 +1,28 @@
-import * as gsap from '../../node_modules/gsap'
+import {gsap } from '../../node_modules/gsap'
+
 
 const sound_btn = document.getElementById('sound-click-container')
 
-sound_btn.addEventListener('click', ()=>{
+sound_btn.addEventListener('click', () => {
+   
 
 
-    let container = document.getElementById('sound-on-off-container')
-
-
-    if(container.classList.contains('ON')){
-
-        container.style.transform = 'translateY(-50%)'
-        container.classList.remove('ON')
-        container.classList.add('OFF')
-        console.log('on')
+    const off = document.getElementById('sound-off')
+    
+    const on = document.getElementById('sound-on')
+   
+    if(off.classList.contains('active')){
+        off.classList.remove('active')
+        on.classList.add('active')
+ 
+       gsap.to('#sound-on', {duration:1, ease:'power4.out', transform:'translateY(0%)' })
+        gsap.to('#sound-off', {duration:1, ease:'power4.out', transform:'translateY(0%)' })
     }else{
-        container.style.transform = 'translateY(0%)'
-        container.classList.remove('OFF')
-        container.classList.add('ON')
+        off.classList.add('active')
+        on.classList.remove('active')
         console.log('off')
+        gsap.to('#sound-on', {duration:1, ease:'power4.out', transform:'translateY(-100%)' })
+        gsap.to('#sound-off', {duration:1, ease:'power4.out', transform:'translateY(-100%)' })
     }
+
 })
