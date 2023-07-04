@@ -11,7 +11,8 @@ body, html{
 
 /* //declare the colors variables */
 :root{
-    --dark-brown:#9a8e7e;
+    --dark-brown: #B7AB98;
+    /* --dark-brown:#9a8e7e; */
     --light-brown:#4d4d4d;
     --body-bg:#111011;
 }
