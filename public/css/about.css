@@ -1,0 +1,30 @@
+#About{
+    height:100vh;
+    width: 100vw;
+    font-family: 'avant-garde';
+    font-weight:bold;
+    transform: translateY( -5%);
+}
+
+#hero-text{
+    height:100%;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:var(--dark-brown);
+    font-size: 5.3rem;
+    line-height: 84%;
+}
+
+
+#hero-name{
+    font-size: 0.7rem;
+    font-weight:400;
+    letter-spacing:0.3rem;
+    transform: translateY(+10%);
+}
+
+.hero-text-orange{
+    color:var(--orange);
+}

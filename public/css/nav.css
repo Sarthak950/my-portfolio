@@ -13,6 +13,8 @@
   
     padding: 2.5rem 4rem;
 
+    letter-spacing:0.1rem;
+
 }
 .logo-svg{
     height: 2.5rem;
@@ -36,7 +38,7 @@
 .top-nav-items{
     margin:0;
     font-size: 0.8rem;
-    font-family: 'alpino-bold';
+    font-family: 'avant-garde';
 }
 
 .current{
@@ -59,7 +61,8 @@
     display: flex;
     flex-direction:column;
     align-items:space-between;
-
+    
+    z-index:100;
     position: absolute;
     bottom: 0;
     left:0;
@@ -84,10 +87,13 @@
     padding: 5.7rem 1.6rem;
    
     rotate: -90deg;
+
+    z-index:100;
         
     color: var(--dark-brown);
-    font-family: 'alpino-bold';  
+    font-family: 'avant-garde';  
     font-size:0.8rem;
+    letter-spacing:0.1rem;
 }
 .sound-btn{
     color:var(--light-brown);

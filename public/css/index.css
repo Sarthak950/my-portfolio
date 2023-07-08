@@ -8,6 +8,11 @@ body, html{
     font-family: 'alpino-bold';
     src: url('../fonts/alpino-bold.woff');
 }
+@font-face{
+    font-family: 'avant-garde';
+    src: url('../fonts/AVGARDD_2.TTF')
+}
+
 
 /* //declare the colors variables */
 :root{
@@ -15,6 +20,7 @@ body, html{
     /* --dark-brown:#9a8e7e; */
     --light-brown:#4d4d4d;
     --body-bg:#111011;
+    --orange: #eb5939;
 }
 
 a{
