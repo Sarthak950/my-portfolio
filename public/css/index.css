@@ -3,6 +3,8 @@ body, html{
     margin:0;
     user-select: none;
     background-color: var(--body-bg);
+    width:100vw;
+    overflow-x:hidden;
 }
 @font-face{
     font-family: 'alpino-bold';

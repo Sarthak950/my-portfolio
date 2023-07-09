@@ -111,3 +111,9 @@ contact.addEventListener('mouseout',()=>{
             transform:'translateY(0%)'
         })
 })
+
+
+
+
+const about_sec = document.getElementById('About')
+about_sec.addEventListener('')

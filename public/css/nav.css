@@ -63,7 +63,7 @@
     align-items:space-between;
     
     z-index:100;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left:0;
     padding: 3rem 4rem;
