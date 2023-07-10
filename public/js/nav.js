@@ -21,7 +21,6 @@ sound_btn.addEventListener('click', () => {
     }else{
         off.classList.add('active')
         on.classList.remove('active')
-        console.log('off')
         gsap.to('#sound-on', {duration:0.5, ease:'power4.out', transform:'translateY(-100%)' })
         gsap.to('#sound-off', {duration:0.5, ease:'power4.out', transform:'translateY(-100%)' })
     }
@@ -115,5 +114,5 @@ contact.addEventListener('mouseout',()=>{
 
 
 
-const about_sec = document.getElementById('About')
-about_sec.addEventListener('')
+// const about_sec = document.getElementById('About')
+// about_sec.addEventListener('')
