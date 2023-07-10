@@ -3,7 +3,7 @@
     position:absolute;
     top:0;
     /* clip-path: circle(100px at 50% 50%); */
-    clip-path: circle(100px at var(--x, 50%) var(--y, 50%));
+    clip-path: circle(150px at var(--x, 50%) var(--y, 50%));
     transition: clip-path 100ms;
 }
 
