@@ -1,4 +1,4 @@
-import {gsap } from '../../node_modules/gsap'
+import gsap from 'gsap'
 
 
 const sound_btn = document.getElementById('sound-click-container')

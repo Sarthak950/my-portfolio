@@ -1,8 +1,7 @@
-import {gsap } from '../../node_modules/gsap'
+import {gsap } from 'gsap'
 
 
 const layer = document.getElementById('bottom-layer')
-console.log(layer)
 
 window.addEventListener('mousemove', (e)=>{
     const { clientX, clientY} = e;
