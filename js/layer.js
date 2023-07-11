@@ -2,6 +2,7 @@ import {gsap } from 'gsap'
 
 
 const layer = document.getElementById('bottom-layer')
+const mouse_cursor = document.getElementById('mouse')
 
 window.addEventListener('mousemove', (e)=>{
     const { clientX, clientY} = e;
@@ -9,6 +10,13 @@ window.addEventListener('mousemove', (e)=>{
     const y = Math.round((clientY / window.innerHeight) * 100);
 
     gsap.to(layer,{
+        '--x': `${x}%`,
+        '--y': `${y}%`,
+        duration:0.5,
+        ease: 'sine.out'
+    })
+       //make the changes in the style in the js file 
+    gsap.to(mouse_cursor,{
         '--x': `${x}%`,
         '--y': `${y}%`,
         duration:0.5,
