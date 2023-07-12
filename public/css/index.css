@@ -15,6 +15,15 @@ body, html{
     font-family: 'avant-garde';
     src: url('../fonts/AVGARDD_2.TTF')
 }
+@font-family{
+    font-family: 'avant-garde-n';
+    src: url('../fonts/AVGARDN_2.TTF')
+}
+@font-family{
+    font-family: 'avant-garde-do';
+    src: url('../fonts/AVGARDDO_2.TTF')
+}
+
 
 
 /* //declare the colors variables */

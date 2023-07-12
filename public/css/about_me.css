@@ -1,0 +1,36 @@
+.orange-heighlight{
+    color:var(--orange);
+}
+
+.about-me{
+    min-height: 150vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    font-family: 'avant-garde';
+
+    color: var(--dark-brown);
+
+    box-sizing:border-box;
+    margin-inline:4.6rem;
+    margin-right: 25vw;
+    
+}
+
+.about-me-heading{
+    font-size:1.2rem;
+    letter-spacing: .8rem;
+}
+
+
+.about-me-text{
+    font-size:3.7rem;
+    letter-spacing:-0.15rem;
+    margin:0;
+    line-height: 3.6rem;
+}
+
+.abt-me-btm{
+    color: black;
+}
