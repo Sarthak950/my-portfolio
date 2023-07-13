@@ -6,6 +6,9 @@ body, html{
     width:100vw;
     overflow-x:hidden;
     box-sizing:border-box;
+
+
+    scroll-behavior: smooth;
 }
 @font-face{
     font-family: 'alpino-bold';
@@ -15,11 +18,11 @@ body, html{
     font-family: 'avant-garde';
     src: url('../fonts/AVGARDD_2.TTF')
 }
-@font-family{
+@font-face{
     font-family: 'avant-garde-n';
     src: url('../fonts/AVGARDN_2.TTF')
 }
-@font-family{
+@font-face{
     font-family: 'avant-garde-do';
     src: url('../fonts/AVGARDDO_2.TTF')
 }

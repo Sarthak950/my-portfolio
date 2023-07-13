@@ -13,8 +13,8 @@
     color: var(--dark-brown);
 
     box-sizing:border-box;
-    margin-left:5rem;
-    margin-right: 30vw;
+    margin-inline:5rem;
+    /* margin-right: 30vw; */
     
 }
 
@@ -33,4 +33,22 @@
 
 .abt-me-btm{
     color: black;
+}
+
+
+.about-me-slid-container{
+    position:relative;
+}
+
+
+
+.abt-me-trans-text{
+    position:absolute;
+    top:0;
+    opacity: 0.3;
+}
+
+
+.line{
+    clip-path: polygon(0 0, 0 0, 0 100%,0 100%);
 }
