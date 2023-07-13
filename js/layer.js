@@ -36,7 +36,9 @@ window.addEventListener('mousemove', (e)=>{
 })
 
 
+
 window.addEventListener('scroll', (e)=>{
+    console.log('scroll')
     let scrollLeft =  document.documentElement.scrollLeft;
     let scrollTop = document.documentElement.scrollTop;
 
