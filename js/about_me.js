@@ -1,18 +1,49 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
+import LocomotiveScroll from "locomotive-scroll";
 
 gsap.registerPlugin(ScrollTrigger)
+
+ScrollTrigger.defaults({
+  scroller: '[data-scroll-container]',
+  markers: false
+});
+
+const scroll = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true,
+    multiplier: 0.5,
+    smartphone: {
+        smooth: true,
+    },
+    tablet: {
+        smooth: true,
+    },
+    getDirection: true,
+});
+// Scroll position for ScrollTrigger
+ScrollTrigger.scrollerProxy( '[data-scroll-container]', {
+    scrollTop( value ) {
+        return arguments.length ? scroll.scrollTo( value, 0, 0 ) : scroll.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+        return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+    },
+    pinType: document.querySelector( '[data-scroll-container]' ).style.transform ? "transform" : "fixed"
+} );
+scroll.on( 'scroll', ( instance ) => {
+    ScrollTrigger.update();
+    document.documentElement.setAttribute( 'data-scrolling', instance.direction );
+});
+
+ScrollTrigger.addEventListener( 'refresh', () => scroll.update() );
+ScrollTrigger.refresh();
+
 
 const line1 = document.querySelector('.line1')
 const line2 = document.querySelector('.line2')
 const line3 = document.querySelector('.line3')
 const line4 = document.querySelector('.line4')
-
-ScrollTrigger.create({
-    scroller: "[data-scroll-container]" // this is what you're missing
-    // your other options
-});
-//triger the animation and set the clip path to polygon(0 0 ,100% 0, 100% 100%, 0 100%)
 
 gsap.to(line1, {
     scrollTrigger: {
