@@ -3,23 +3,6 @@
 }
 
 
-
-@media only screen and (max-width: 950px) {
-    /* .for-mob{ */
-        /* display: none; */
-    /* } */
-    .for-desk{
-        display: none;
-    }
-}
-@media only screen and (min-width: 950px) {
-    .for-mob{
-        display: none;
-    }
-    /* .for-desk{ */
-    /*     display: ; */
-    /* } */
-}
 .about-me{
     min-height: 100vh;
     display:flex;
@@ -31,7 +14,7 @@
     color: var(--dark-brown);
 
     box-sizing:border-box;
-    margin-inline:11rem;
+    margin-left:11rem;
     /* margin-right: 30vw; */
     
 }
@@ -71,7 +54,30 @@
     clip-path: polygon(0 0, 0 0, 0 100%,0 100%);
 }
 
+
+
+
+
 .for-mob > p{
-    font-size: 3.1rem;
-    line-height: 3.1rem;
+    font-size: 4rem;
+    line-height: 4rem;
 }
+
+
+
+@media only screen and (max-width: 950px) {
+    .for-desk{
+        display: none;
+    }
+
+    .about-me{
+        margin-left:8rem;
+    }
+}
+@media only screen and (min-width: 950px) {
+    .for-mob{
+        display: none;
+    }
+}
+
+
