@@ -1,8 +1,8 @@
 
 #bottom-layer{
-    position:absolute;
-    top:0;
-    clip-path: circle(115px at var(--x, 0%) var(--y, 0%));
+    /* position:absolute; */
+    /* top:0; */
+    /* clip-path: circle(115px at var(--x, 0%) var(--y, 0%)); */
 
     background-color: var(--orange);
 }
