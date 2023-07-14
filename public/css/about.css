@@ -20,7 +20,7 @@
     align-items:center;
     justify-content:center;
     color:var(--dark-brown);
-    font-size: 5.3rem;
+    font-size: 7rem;
     line-height: 84%;
     transform: translateY( -3%);
     
@@ -28,7 +28,7 @@
 
 
 .hero-name{
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight:400;
     letter-spacing:0.3rem;
     transform: translateY(+10%);

@@ -24,13 +24,6 @@ window.addEventListener('mousemove', (e)=>{
     x = Math.round((e.clientX + scrollLeft) / window.innerWidth * 100);  
     y = Math.round((e.clientY + scrollTop) / height * 100);
 
-    // gsap.to(layer,{
-    //     '--x': `${x}%`,
-    //     '--y': `${y}%`,
-    //     duration:0.5,
-    //     ease: 'sine.out'
-    // })
-
     moveLayer(x,y)
 
 })

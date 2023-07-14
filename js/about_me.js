@@ -1,27 +1,31 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
-import LocomotiveScroll from "locomotive-scroll";
+import LocomotiveScroll from 'locomotive-scroll'
 
 gsap.registerPlugin(ScrollTrigger)
+
+const line1 = document.querySelector('.line1')
+const line2 = document.querySelector('.line2')
+const line3 = document.querySelector('.line3')
+const line4 = document.querySelector('.line4')
 
 ScrollTrigger.defaults({
   scroller: '[data-scroll-container]',
   markers: false
 });
 
-const scroll = new LocomotiveScroll({
-    el: document.querySelector("[data-scroll-container]"),
+var scroll = new LocomotiveScroll( {
+    el: document.querySelector( '[data-scroll-container]' ),
     smooth: true,
-    multiplier: 0.5,
-    smartphone: {
-        smooth: true,
-    },
-    tablet: {
-        smooth: true,
-    },
+    multiplier: 2.3,
     getDirection: true,
+    momentum: true,
 });
-// Scroll position for ScrollTrigger
+
+scroll.on( 'scroll', ( instance ) => {
+    ScrollTrigger.update();
+    document.documentElement.setAttribute( 'data-scrolling', instance.direction );
+});
 ScrollTrigger.scrollerProxy( '[data-scroll-container]', {
     scrollTop( value ) {
         return arguments.length ? scroll.scrollTo( value, 0, 0 ) : scroll.scroll.instance.scroll.y;
@@ -31,25 +35,18 @@ ScrollTrigger.scrollerProxy( '[data-scroll-container]', {
     },
     pinType: document.querySelector( '[data-scroll-container]' ).style.transform ? "transform" : "fixed"
 } );
-scroll.on( 'scroll', ( instance ) => {
-    ScrollTrigger.update();
-    document.documentElement.setAttribute( 'data-scrolling', instance.direction );
-});
 
 ScrollTrigger.addEventListener( 'refresh', () => scroll.update() );
 ScrollTrigger.refresh();
 
 
-const line1 = document.querySelector('.line1')
-const line2 = document.querySelector('.line2')
-const line3 = document.querySelector('.line3')
-const line4 = document.querySelector('.line4')
-
+const starting = 75;
+const ending = 65;
 gsap.to(line1, {
     scrollTrigger: {
         trigger: line1,
-        start: 'top 95%',
-        end: 'top 85%',
+        start: `top ${starting}%`,
+        end: `top ${ending}%`,
         scrub: true,
         toggleActions: 'restart none none none'
     },
@@ -58,8 +55,8 @@ gsap.to(line1, {
 gsap.to(line2, {
     scrollTrigger: {
         trigger: line2,
-        start: 'top 85%',
-        end: 'top 75%',
+        start: `top ${starting}%`,
+        end: `top ${ending}%`,
         scrub: true,
         toggleActions: 'restart none none none'
     },
@@ -68,8 +65,8 @@ gsap.to(line2, {
 gsap.to(line3, {
     scrollTrigger: {
         trigger: line3,
-        start: 'top 75%',
-        end: 'top 65%',
+        start: `top ${starting}%`,
+        end: `top ${ending}%`,
         scrub: true,
         toggleActions: 'restart none none none'
     },
@@ -78,8 +75,8 @@ gsap.to(line3, {
 gsap.to(line4, {
     scrollTrigger: {
         trigger: line4,
-        start: 'top 65%',
-        end: 'top 55%',
+        start: `top ${starting}%`,
+        end: `top ${ending}%`,
         scrub: true,
         toggleActions: 'restart none none none'
     },
