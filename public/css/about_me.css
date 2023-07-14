@@ -2,6 +2,24 @@
     color:var(--orange);
 }
 
+
+
+@media only screen and (max-width: 950px) {
+    /* .for-mob{ */
+        /* display: none; */
+    /* } */
+    .for-desk{
+        display: none;
+    }
+}
+@media only screen and (min-width: 950px) {
+    .for-mob{
+        display: none;
+    }
+    /* .for-desk{ */
+    /*     display: ; */
+    /* } */
+}
 .about-me{
     min-height: 100vh;
     display:flex;
@@ -19,16 +37,16 @@
 }
 
 .about-me-heading{
-    font-size:1.2rem;
+    font-size:1.4rem;
     letter-spacing: .8rem;
 }
 
 
 .about-me-text{
-    font-size:3.7rem;
-    letter-spacing:-0.1rem;
+    font-size:4.7rem;
+    letter-spacing:0rem;
     margin:0;
-    line-height: 3.6rem;
+    line-height: 4.7rem;
 }
 
 .abt-me-btm{
@@ -51,4 +69,9 @@
 
 .line{
     clip-path: polygon(0 0, 0 0, 0 100%,0 100%);
+}
+
+.for-mob > p{
+    font-size: 3.1rem;
+    line-height: 3.1rem;
 }
