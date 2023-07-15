@@ -11,14 +11,13 @@ ScrollTrigger.defaults({
 var scroll = new LocomotiveScroll( {
     el: document.querySelector( '[data-scroll-container]' ),
     smooth: true,
-    multiplier: 2.7,
+    multiplier: .5,
     getDirection: true,
     momentum: true,
 });
 
 scroll.on( 'scroll', ( instance ) => {
     ScrollTrigger.update();
-    // console.log( instance)
     document.documentElement.setAttribute( 'data-scrolling', instance.direction );
 });
 ScrollTrigger.scrollerProxy( '[data-scroll-container]', {
@@ -35,51 +34,46 @@ ScrollTrigger.addEventListener( 'refresh', () => scroll.update() );
 ScrollTrigger.refresh();
 
 
-// const layer = document.getElementById('bottom-layer')
-// let x = 0;
-// let y = 0;
-// let scroll_dis= 0 ;
-//
-//
-// let height =0;
-// scroll.on('scroll',(instance)=>{
-//
-//
-//
-// })
-//
+const layer = document.getElementById('bottom-layer')
+let x = 0;
+let y = 0;
+let scroll_dis= 0 ;
 
-// window.addEventListener('mousemove', (e)=>{
-//
-//
-//     let scrollLeft =  document.documentElement.scrollLeft;
-//     let scrollTop = document.documentElement.scrollTop;
-//
-//     x = Math.round((e.clientX + scrollLeft) / window.innerWidth * 100);  
-//     y = Math.round((e.clientY + scrollTop) / height * 100);
-//
-//     moveLayer(x,y)
-//
-// })
 
-// window.addEventListener('scroll', ()=>{
-//     console.log('scroll')
-//     // let scrollLeft =  document.documentElement.scrollLeft;
-//     let scrollTop = document.documentElement.scrollTop;
-//
-//    
-//     y += Math.round((scrollTop - scroll_dis) / height * 100);
-//     scroll_dis = scrollTop;  
-//
-//     moveLayer(x,y)
-//
-// })
+let height = 0;
+scroll.on('scroll',(instance)=>{
+
+    height = instance.limit.y;
+    scroll_dis = instance.scroll.y;
+
+
+   // moveLayer(x, y+scroll_dis) 
+})
+
+
+window.addEventListener('mousemove', (e)=>{
+
+    let scrollLeft = 0;
+    let scrollTop = 0;
+
+    // let scrollLeft =  document.documentElement.scrollLeft;
+    // let scrollTop = document.documentElement.scrollTop;
+    //
+    // x = Math.round((e.clientX + scrollLeft) / window.innerWidth * 100);  
+    // y = Math.round((e.clientY + scrollTop) / window.innherHeight  * 100);
+
+    x = e.clientX
+    y = e.clientY + scroll_dis
+    moveLayer(x,y)
+
+})
+
 
 
 const moveLayer = (x, y)=>{
     gsap.to(layer,{
-        '--x': `${x}%`,
-        '--y': `${y}%`,
+        '--x': `${x}px`,
+        '--y': `${y}px`,
         duration:0.5,
         ease: 'sine.out'
     })
@@ -107,6 +101,11 @@ const line6 = document.querySelector('.line6')
 const line7 = document.querySelector('.line7')
 const line8 = document.querySelector('.line8')
 const line9 = document.querySelector('.line9')
+const line10 = document.querySelector('.line10')
+const line11 = document.querySelector('.line11')
+const line12 = document.querySelector('.line12')
+const line13 = document.querySelector('.line13')
+const line14 = document.querySelector('.line14')
 
 
 
@@ -205,4 +204,63 @@ gsap.to(line9, {
 
 
 
+
+
+// starting = 95;
+starting = 80
+ending = 10
+
+
+gsap.to(line10, {
+    scrollTrigger: {
+        trigger: line10,
+        start: `top ${starting}%`,
+        end: `top ${ending}%`,
+        scrub: true,
+        toggleActions: 'restart none none none',
+    },
+   
+    clipPath: 'polygon(0 0 ,100% 0, 100% 100%, 0 100%)'
+})
+gsap.to(line11, {
+    scrollTrigger: {
+        trigger: line11,
+
+        start: `top ${starting}%`,
+        end: `top ${ending}%`,
+        scrub: true,
+        toggleActions: 'restart none none none',
+    },
+    clipPath: 'polygon(0 0 ,100% 0, 100% 100%, 0 100%)'
+})
+gsap.to(line12, {
+    scrollTrigger: {
+        trigger: line12,
+        start: `top ${starting}%`,
+        end: `top ${ending }%`,
+        scrub: true,
+        toggleActions: 'restart none none none',
+    },
+    clipPath: 'polygon(0 0 ,100% 0, 100% 100%, 0 100%)'
+})
+gsap.to(line13, {
+    scrollTrigger: {
+        trigger: line13,
+        start: `top ${starting+5}%`,
+        end: `top ${ending}%`,
+        scrub: true,
+        toggleActions: 'restart none none none',
+    },
+    clipPath: 'polygon(0 0 ,100% 0, 100% 100%, 0 100%)'
+})
+gsap.to(line14, {
+    scrollTrigger: {
+        trigger: line14,
+        start: `top ${starting+10}%`,
+        end: `top ${ending}%`,
+        scrub: true,
+        toggleActions: 'restart none none none',
+    },
+    clipPath: 'polygon(0 0 ,100% 0, 100% 100%, 0 100%)'
+})
 
