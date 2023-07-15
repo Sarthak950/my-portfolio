@@ -46,21 +46,13 @@ scroll.on('scroll',(instance)=>{
     height = instance.limit.y;
     scroll_dis = instance.scroll.y;
 
+    // console.log(scroll_dis)
 
-   // moveLayer(x, y+scroll_dis) 
+    moveLayerFast(x, y)
 })
 
 
 window.addEventListener('mousemove', (e)=>{
-
-    let scrollLeft = 0;
-    let scrollTop = 0;
-
-    // let scrollLeft =  document.documentElement.scrollLeft;
-    // let scrollTop = document.documentElement.scrollTop;
-    //
-    // x = Math.round((e.clientX + scrollLeft) / window.innerWidth * 100);  
-    // y = Math.round((e.clientY + scrollTop) / window.innherHeight  * 100);
 
     x = e.clientX
     y = e.clientY + scroll_dis
@@ -68,6 +60,18 @@ window.addEventListener('mousemove', (e)=>{
 
 })
 
+const moveLayerFast = (x, y)=>{
+    console.log(x, y)
+    
+    gsap.to(layer,{
+        '--x': `${x}px`,
+        '--y': `${y}px`,
+        duration:0.1,
+        ease: 'sine.out',
+        delay: 0
+    })
+
+}
 
 
 const moveLayer = (x, y)=>{
@@ -219,7 +223,7 @@ gsap.to(line10, {
         scrub: true,
         toggleActions: 'restart none none none',
     },
-   
+
     clipPath: 'polygon(0 0 ,100% 0, 100% 100%, 0 100%)'
 })
 gsap.to(line11, {
