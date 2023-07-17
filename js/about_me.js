@@ -37,6 +37,7 @@ ScrollTrigger.refresh();
 const layer = document.getElementById('bottom-layer')
 let x = 0;
 let y = 0;
+let y_copy = 0;
 let scroll_dis= 0 ;
 
 
@@ -46,8 +47,10 @@ scroll.on('scroll',(instance)=>{
     height = instance.limit.y;
     scroll_dis = instance.scroll.y;
 
+    y = scroll_dis + y_copy
     // console.log(scroll_dis)
 
+    console.log(instance)
     moveLayerFast(x, y)
 })
 
@@ -56,13 +59,18 @@ window.addEventListener('mousemove', (e)=>{
 
     x = e.clientX
     y = e.clientY + scroll_dis
+    y_copy = e.clientY
     moveLayer(x,y)
 
 })
 
 const moveLayerFast = (x, y)=>{
-    console.log(x, y)
-    
+    // console.log(x, y)
+   // console.log('called')
+
+    // layer.style.setProperty('--x', `${x}px`)
+    // layer.style.setProperty('--y', `${y}px`)
+
     gsap.to(layer,{
         '--x': `${x}px`,
         '--y': `${y}px`,
