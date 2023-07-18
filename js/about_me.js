@@ -39,8 +39,6 @@ let x = 0;
 let y = 0;
 let y_copy = 0;
 let scroll_dis= 0 ;
-
-
 let height = 0;
 scroll.on('scroll',(instance)=>{
 
@@ -48,13 +46,8 @@ scroll.on('scroll',(instance)=>{
     scroll_dis = instance.scroll.y;
 
     y = scroll_dis + y_copy
-    // console.log(scroll_dis)
-
-    console.log(instance)
     moveLayerFast(x, y)
 })
-
-
 window.addEventListener('mousemove', (e)=>{
 
     x = e.clientX
@@ -63,25 +56,15 @@ window.addEventListener('mousemove', (e)=>{
     moveLayer(x,y)
 
 })
-
 const moveLayerFast = (x, y)=>{
-    // console.log(x, y)
-   // console.log('called')
-
-    // layer.style.setProperty('--x', `${x}px`)
-    // layer.style.setProperty('--y', `${y}px`)
-
     gsap.to(layer,{
         '--x': `${x}px`,
         '--y': `${y}px`,
-        duration:0.1,
+        duration:0.7,
         ease: 'sine.out',
-        delay: 0
     })
 
 }
-
-
 const moveLayer = (x, y)=>{
     gsap.to(layer,{
         '--x': `${x}px`,
@@ -93,8 +76,26 @@ const moveLayer = (x, y)=>{
 
 
 
+const enlarge_circle = document.querySelectorAll('.circle-enlarge')
 
+enlarge_circle.forEach((circle)=>{
+    //for each circle increase the layers --s vale in pixels when hovered
+    circle.addEventListener('mouseenter',()=>{
+        gsap.to(layer,{
+            '--s': '220px',
+            duration:0.3,
+            ease: 'sine.out'
+        })
+    });
+    circle.addEventListener('mouseleave',()=>{
+        gsap.to(layer,{
+            '--s': '13px',
+            duration:0.3,
+            ease: 'sine.out'
+        })
+    });
 
+})
 
 
 

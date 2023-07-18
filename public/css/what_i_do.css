@@ -4,7 +4,7 @@
     color: var(--dark-brown);
     font-family: 'avant-garde';
     position: relative;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 
     padding-inline:  11rem;
 

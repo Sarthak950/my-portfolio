@@ -16,6 +16,7 @@
     "gsap": "^3.12.2",
     "locomotive-scroll": "^4.1.4",
     "netlify-cli": "^15.8.1",
-    "smooth-scrollbar": "^8.8.4"
+    "smooth-scrollbar": "^8.8.4",
+    "three": "^0.154.0"
   }
 }

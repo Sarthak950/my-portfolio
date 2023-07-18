@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="/css/about_me.css">
         <link rel="stylesheet" href="/css/base.css">
         <link rel="stylesheet" href="/css/work.css">
+        <link rel="stylesheet" href="/css/three_js.css">
     </head>
 
     <body  >
@@ -127,15 +128,18 @@
             <div id="top-layer">
                 <div id="About">
                     <div class="hero-text" id="hero-text-container">
-                        <span class="circle-enlarge hero-name"> SARTHAK SHARMA </span>
+                        <div class="circle-enlarge hero-text">
 
-                        <div class="circle-enlarge hero-text-white">MAKING</div>
+                            <span class=" hero-name"> SARTHAK SHARMA </span>
 
-                        <div class="circle-enlarge hero-text-orange">GOOD</div>
-                        <div class="circle-enlarge hero-text-orange">WEBSITES</div>
+                            <div class=" hero-text-white">MAKING</div>
 
-                        <div class="circle-enlarge hero-text-white">SINCE</div>
-                        <div class="circle-enlarge hero-text-white">2021</div>
+                            <div class=" hero-text-orange">GOOD</div>
+                            <div class="hero-text-orange">WEBSITES</div>
+
+                            <div class=" hero-text-white">SINCE</div>
+                            <div class=" hero-text-white">2021</div>
+                        </div>
                     </div>
                 </div>
 
@@ -143,7 +147,7 @@
                 <div class="about-me" >
                     <p class="about-me-heading">ABOUT ME</p>
 
-                    <span class="about-me-slid-container">
+                    <span class="about-me-slid-container circle-enlarge">
 
 
 
@@ -184,8 +188,10 @@
                             </p>
                         </div>
 
-
                     </span>
+
+
+
                 </div>
 
 
@@ -221,9 +227,10 @@
                             <div class="">WORDPRESS<br></div>
                             <hr>
                         </div>
- 
-                    </div>
 
+                    </div>
+                    <!-- <canvas id="mouse-cavas"></canvas> -->
+                    <canvas id="cup-canvas"></canvas>
                 </div>
 
                 <div class="work-div-con">
@@ -238,12 +245,12 @@
                                     services<br></span>
                                 <span class="line line16"> for customers of all sizes,<br></span>
                                 <span class="line line17">   specializing in creating stylish,<br></span>
-                                    <span class="line line18"> modern websites, web services,<br></span>
-                                    <span class="line line19"> online stores & automation.  </span>
-                                </span>
+                                <span class="line line18"> modern websites, web services,<br></span>
+                                <span class="line line19"> online stores & automation.  </span>
+                            </span>
                         </div>
                         <div class="work-text work-text-trans">
-                            <span class="">
+                            <span class="circle-enlarge">
                                 I <span class="orange-heighlight">design</span> and <span class="orange-heighlight">develop</span> services<br>
                                     for customers of all sizes, <br>
                                     specializing in creating stylish, <br>
@@ -267,23 +274,26 @@
 
             <div id="bottom-layer">
                 <div id="About2" class="btm-abt">
-                    <div class="hero-text">
-                        <span class=" hero-name btm-abt-text">
-                            SARTHAK SHARMA
-                        </span>
+                    <div class="hero-text ">
+                        <div class="circle-enlarge hero-text ">
 
-                        <div class=" hero-text-white btm-abt-text">HIDING</div>
+                            <span class="  hero-name btm-abt-text">
+                                SARTHAK SHARMA
+                            </span>
 
-                        <div class=" hero-text-orange btm-abt-text">BAD</div>
-                        <div class=" hero-text-orange btm-abt-text">DESIGN</div>
+                            <div class=" hero-text-white btm-abt-text">HIDING</div>
+                            <div class=" hero-text-orange btm-abt-text">BAD</div>
+                            <div class=" hero-text-orange btm-abt-text">DESIGN</div>
+                            <div class=" hero-text-white btm-abt-text">SINCE</div>
+                            <div class="hero-text-white btm-abt-text">2021</div>
 
-                        <div class=" hero-text-white btm-abt-text">SINCE</div>
-                        <div class=" hero-text-white btm-abt-text">2021</div>
+
+                        </div>
                     </div>
 
                 </div>
 
-                <div class="about-me abt-me-btm">
+                <div class="about-me abt-me-btm circle-enlarge">
 
                     <p class="about-me-heading">ABOUT ME</p>
                     <div class="for-desk">
@@ -356,14 +366,14 @@
 
                 <div class="work-div-con">
                     <p class="work-title color-black">WORK</p>
-                        <div class="work-text ">
-                            <span class="color-black">
-                                I design and develop services<br>
-                                    for customers of all sizes, <br>
-                                    specializing in creating stylish, <br>
-                                    modern websites, web services, <br>
-                                    online stores & automation.  
-                            </span>
+                    <div class="work-text ">
+                        <span class="color-black circle-enlarge">
+                            I design and develop services<br>
+                                for customers of all sizes, <br>
+                                specializing in creating stylish, <br>
+                                modern websites, web services, <br>
+                                online stores & automation.  
+                        </span>
                     </div>
                 </div>
 
@@ -377,11 +387,12 @@
 
 
 
-<!--         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"> -->
-<!-- <path d="M0 0H12V12L6.5 6L0 0Z" fill="#EB5939"/> -->
-<!-- </svg> -->
-<!---->
+        <!--         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"> -->
+        <!-- <path d="M0 0H12V12L6.5 6L0 0Z" fill="#EB5939"/> -->
+        <!-- </svg> -->
+        <!---->
 
+        <script type="module" src="/cup_three.js"></script>
         <script type="module" src="/js/about_me.js"></script>
         <script type="module" src="/js/nav.js"></script>
         <script type="module" src="test.js"></script>
