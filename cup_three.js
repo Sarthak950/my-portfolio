@@ -26,13 +26,19 @@ gltfloader.load(
 		gltf.scenes; // Array<THREE.Group>
 		gltf.cameras; // Array<THREE.Camera>
 		gltf.asset; // Object
-        gltf.scene.scale.set(0.6, 0.6, 0.6)
+        gltf.scene.scale.set(0.6, 0.6, 0.6);
+
+        gltf.scene.position.set(0, -3.5, 0);
+        gltf.scene.rotation.x = -0.3;
+        gltf.scene.rotation.y = -0.3;
+        gltf.scene.rotation.z = -0.3;
+    },
+    function(xhr){
+        // console.log((xhr.loaded/xhr.total * 100) + '% loaded')
     },
     //called when loading is in progresses
-    function(xhr){
-        console.log((xhr.loaded/xhr.total*100) + '% loaded')
-    },
     function (error){
+        console.log(error)
         console.log('An error happened')
     }
 
@@ -42,16 +48,23 @@ gltfloader.load(
 
 //scene
 const scene = new THREE.Scene();
-scene.add(
-    new THREE.AmbientLight(0xffffff, 0.5),
-    new THREE.DirectionalLight(0xffffff, 0.5),
-    new THREE.PointLight(0xffffff, 0.5)
-    
-)
+
+const directional = new THREE.DirectionalLight(0xffffff, 0.5);
+directional.position.set(0, -2, -3);
+scene.add(directional)
+
+const spotLight = new THREE.SpotLight(0xffffff, 0.5);
+spotLight.position.set(0, -2, -3);
+scene.add(spotLight)
+
+const SpotLight2 = new THREE.SpotLight(0xffffff, 0.5);
+SpotLight2.position.set(0, 2, -3);
+scene.add(SpotLight2)
+
 //camera
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
 scene.add(camera);
-camera.position.x = 25;
+camera.position.x = 26;
 camera.lookAt(0, 0, 0)
 
 
@@ -70,9 +83,11 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 
 //controls
-// const controls = new OrbitControls(camera, canvas);
-// controls.target.set(0, 0, 0);
-// controls.enableDamping = true;
+const controls = new OrbitControls(camera, canvas);
+controls.target.set(0, 0, 0);
+controls.enableDamping = true;
+controls.enablePan = false;
+controls.enableZoom = false;
 
 
 
@@ -87,10 +102,12 @@ function animate() {
 
       
     //update controls
-    // controls.update();
+    controls.update();
 
     if(loaded){
-        model.rotation.y = elapsedTime;
+        // model.rotation.y = elapsedTime;
+    
+    console.log(model.rotation)
     }
 
 

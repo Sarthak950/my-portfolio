@@ -57,6 +57,10 @@ window.addEventListener('mousemove', (e)=>{
 
 })
 const moveLayerFast = (x, y)=>{
+        //do it without gsap
+    layer.style.setProperty('--x', `${x}px`)
+    layer.style.setProperty('--y', `${y}px`)
+
     gsap.to(layer,{
         '--x': `${x}px`,
         '--y': `${y}px`,
@@ -66,6 +70,7 @@ const moveLayerFast = (x, y)=>{
 
 }
 const moveLayer = (x, y)=>{
+
     gsap.to(layer,{
         '--x': `${x}px`,
         '--y': `${y}px`,
@@ -84,18 +89,21 @@ enlarge_circle.forEach((circle)=>{
         gsap.to(layer,{
             '--s': '220px',
             duration:0.3,
-            ease: 'sine.out'
+            ease: 'sine.out',
+            delay: 0
         })
     });
     circle.addEventListener('mouseleave',()=>{
         gsap.to(layer,{
             '--s': '13px',
             duration:0.3,
-            ease: 'sine.out'
+            ease: 'sine.out',
+            delay: 0
         })
     });
 
 })
+
 
 
 
