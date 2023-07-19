@@ -17,6 +17,7 @@ var scroll = new LocomotiveScroll( {
 });
 
 scroll.on( 'scroll', ( instance ) => {
+    scroll_delta = instance.scroll.y;
     ScrollTrigger.update();
     document.documentElement.setAttribute( 'data-scrolling', instance.direction );
 });

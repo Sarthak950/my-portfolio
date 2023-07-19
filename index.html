@@ -5,7 +5,7 @@
         <title>Sarthak Sharma</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="public/css/index.css" rel="stylesheet" />
+        <link href="/css/index.css" rel="stylesheet" />
         <link href="/css/nav.css" rel="stylesheet">
         <link href="/css/about.css" rel="stylesheet">
         <link rel="stylesheet" href="/css/layer.css">
@@ -229,7 +229,7 @@
                         </div>
 
                     </div>
-                    <!-- <canvas id="mouse-cavas"></canvas> -->
+                    <canvas id="mouse-canvas"></canvas>
                     <canvas id="cup-canvas"></canvas>
                 </div>
 
@@ -392,6 +392,10 @@
         <!-- </svg> -->
         <!---->
 
+        <script>
+            var scroll_delta = 0;
+        </script>
+        <script type="module" src="/mouse_three.js"></script>
         <script type="module" src="/cup_three.js"></script>
         <script type="module" src="/js/about_me.js"></script>
         <script type="module" src="/js/nav.js"></script>

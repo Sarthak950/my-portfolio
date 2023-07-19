@@ -1,0 +1,49 @@
+#About{
+    height:100vh;
+    width: 100vw;
+    font-family: 'avant-garde';
+    font-weight:bold;
+    /* transform: translateY( -5%); */
+}
+#About2{
+    height:100vh;
+    width: 100vw;
+    font-family: 'avant-garde';
+    font-weight:bold;
+    /* transform: translateY( -5%); */
+}
+
+.hero-text{
+    height:100%;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:var(--dark-brown);
+    font-size: 7rem;
+    line-height: 84%;
+    transform: translateY( -3%);
+    
+}
+
+
+.hero-name{
+    font-size: 1rem;
+    font-weight:400;
+    letter-spacing:0.3rem;
+    transform: translateY(+10%);
+}
+
+.hero-text-orange{
+    color:var(--orange);
+}
+
+
+
+
+.btm-abt{
+    background-color:var(--orange);
+}
+.btm-abt-text{
+    color:var(--black);
+}

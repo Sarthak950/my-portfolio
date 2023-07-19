@@ -8,14 +8,14 @@ const gltfloader =  new GLTFLoader();
 const dracoloader = new DRACOLoader();
 
 // Specify path to a folder containing WASM/JS decoding libraries.
-dracoloader.setDecoderPath( 'node_modules/three/examples/jsm/libs/draco/' );
+dracoloader.setDecoderPath( '/draco/' );
 
 gltfloader.setDRACOLoader( dracoloader );
 let model;
 let loaded =0;
 gltfloader.load(
     //resource url
-    '../public/assets/coffee.min.gltf',
+    '/assets/coffee.min.gltf',
     //called when resource is loaded
     function(gltf){
         scene.add(gltf.scene);
@@ -105,9 +105,9 @@ function animate() {
     controls.update();
 
     if(loaded){
-        // model.rotation.y = elapsedTime;
+        model.rotation.y = scroll_delta/300;
     
-    console.log(model.rotation)
+    // console.log(model.rotation)
     }
 
 

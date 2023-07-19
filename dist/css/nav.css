@@ -1,0 +1,128 @@
+.top-nav{
+    position: fixed;
+    top:0;
+    left:0;
+    box-sizing: border-box;
+    width: 100vw;
+
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+  
+    padding: 2.5rem 4rem;
+
+    letter-spacing:0.1rem;
+
+}
+.logo-svg{
+    height: 2.5rem;
+    width: auto;
+}
+.top-nav-item{
+    display: flex;
+    flex-direction:column;
+    align-items :flex-end;
+    justify-content:space-between;
+}
+
+.nav-items-link{
+    margin-top:0.4rem;
+    text-decoration:none;
+    color: var(--light-brown);
+    font-family: 'mark-simonson-bold';
+}
+
+
+.top-nav-items{
+    margin:0;
+    font-size: 0.8rem;
+    font-family: 'avant-garde';
+}
+
+.current{
+    color: var(--dark-brown);
+}
+.top-nav-double-container{
+    position: relative;
+    height:1rem;
+    clip-path:inset(0);
+}
+
+
+
+
+
+
+
+
+.left-nav{
+    display: flex;
+    flex-direction:column;
+    align-items:space-between;
+    
+    z-index:100;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    padding: 3rem 4rem;
+}
+.left-nav>a{
+    margin: 0.5rem 0;
+}
+
+.left-nav>a>svg{
+    margin-top: 0.5rem;
+    height:1.2rem;
+}
+
+
+
+.right-nav{
+    position: fixed;
+    bottom:0;
+    right:0;
+    
+    padding: 5.7rem 1.6rem;
+   
+    rotate: -90deg;
+
+    z-index:100;
+        
+    color: var(--dark-brown);
+    font-family: 'avant-garde';  
+    font-size:0.8rem;
+    letter-spacing:0.1rem;
+}
+.sound-btn{
+    color:var(--light-brown);
+    margin-right: 0.3rem;
+}
+.sound-btn:hover{
+    color:var(--dark-brown);
+}
+
+
+/*  for the on off button */
+#sound-click-container{
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+#sound-on-off-container{
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+#sound-click-container{
+    position:relative;
+    height:1rem;
+    clip-path:inset(0);
+
+}
+
