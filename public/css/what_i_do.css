@@ -4,9 +4,9 @@
     color: var(--dark-brown);
     font-family: 'avant-garde';
     position: relative;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 
-    padding-inline:  11rem;
+    /* padding-inline: 11rem; */
 
 }
 .i-do-text-con{
@@ -16,6 +16,7 @@
 .wid-heading{
     font-size: 1rem;
     letter-spacing: .4rem;
+    padding-inline: 11rem; ;
 }
 
 .what-i-do-text{
@@ -23,9 +24,12 @@
 
     font-size: 7rem;
     line-height: 6rem;
-
+    /* margin-inline: 11rem; */
+    
 }
-
+.heading{
+    margin-left:  11rem;
+}
 .wid-trans{
     position: absolute;
     top: 0;
@@ -37,19 +41,37 @@
     top: 0;
 }
 
+.wid-orange{
+    /* background: var(--orange); */
+    position: absolute;
+    top:0;
+    color: var(--light-brown);
+    /* display: none; */
+    /* background-color: var(--orange); */
+    /* z-index : -10; */
+}
+/* .wid-orange-clip{ */
+/*     /* opacity: 0.1; */ 
+/*     /* background-color: var(--orange); */ 
+/*     /* clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%); */ 
+/* } */
 hr{
     margin:0;
     padding: 0;
     width: 200vw;
     transform: translateX(-50%);
     border: 1px solid var(--light-brown);
-    opacity: 0.3;
+    /* opacity: 0.3; */
 }
 .hr-black{
     width: 100vw;
     transform: translateX(-11rem);
-    
+    margin: 0;
+    padding: 0;
     border: 1px solid black;
+    
+    transform: translateX(-50%);
+    border: 1px solid var(--light-brown);
 }
 
 .wid-text-black-con{
@@ -57,7 +79,7 @@ hr{
     flex-direction: row;
     justify-content: space-between;
    
-    padding-right: 23rem;;
+    padding-right: 23rem;
 
 }
 

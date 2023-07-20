@@ -3,6 +3,7 @@
     width: 100vw;
     font-family: 'avant-garde';
     font-weight:bold;
+    position: relative;
     /* transform: translateY( -5%); */
 }
 #About2{
@@ -20,7 +21,7 @@
     align-items:center;
     justify-content:center;
     color:var(--dark-brown);
-    font-size: 7rem;
+    font-size: 7.5rem;
     line-height: 84%;
     transform: translateY( -3%);
     
@@ -39,11 +40,21 @@
 }
 
 
-
-
 .btm-abt{
     background-color:var(--orange);
 }
 .btm-abt-text{
     color:var(--black);
+}
+
+
+.about-bg-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    background-image: url("../images/nebula.png");
+    background-size: cover;
+    filter: opacity(0.25);
+
 }

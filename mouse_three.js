@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import './public/css/three_js.css'
+// import '/css/three_js.css'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'

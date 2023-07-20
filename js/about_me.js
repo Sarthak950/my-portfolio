@@ -11,7 +11,7 @@ ScrollTrigger.defaults({
 var scroll = new LocomotiveScroll( {
     el: document.querySelector( '[data-scroll-container]' ),
     smooth: true,
-    multiplier: .5,
+    multiplier: .3,
     getDirection: true,
     momentum: true,
 });
@@ -87,6 +87,7 @@ const enlarge_circle = document.querySelectorAll('.circle-enlarge')
 enlarge_circle.forEach((circle)=>{
     //for each circle increase the layers --s vale in pixels when hovered
     circle.addEventListener('mouseenter',()=>{
+        // console.log('enter', circle )
         gsap.to(layer,{
             '--s': '220px',
             duration:0.3,
@@ -106,9 +107,38 @@ enlarge_circle.forEach((circle)=>{
 })
 
 
-
-
-
+//
+// const bar = document.querySelectorAll('.bar-clip-path')
+// // console.log(bar)
+// const layer_bar = document.querySelector('.wid-orange-clip')
+// bar.forEach((bar)=>{
+//     // console.log(bar)
+//     //for each circle increase the layers --s vale in pixels when hovered
+//     bar.addEventListener('mouseenter',()=>{
+//         console.log('enter' ) 
+//         // change the clip path of th
+//         gsap.to(layer_bar,{
+//             clipPath: 'polygon(0 0 ,100% 0, 100% 100%, 0 100%)',
+//             duration:0.3,
+//             ease: 'sine.out',
+//             delay: 0.3
+//         })
+//
+//         
+//     });
+//     bar.addEventListener('mouseleave',()=>{
+//         // console.log('leave')
+//         
+//         gsap.to(layer_bar,{
+//             clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)',
+//             duration:0.3,
+//             ease: 'sine.out',
+//             delay: 0.3
+//
+//         })
+//     });
+//
+// })
 
 
 
@@ -252,9 +282,10 @@ gsap.to(line11, {
         trigger: line11,
 
         start: `top ${starting2}%`,
-        end: `top ${ending2}%`,
-        scrub: 0.3,
-        toggleActions: 'restart none none none',
+        end: `bottom center`,
+        scrub: 0.1,
+        toggleActions: 'restart',
+        // markers: true,
     },
     clipPath: 'polygon(0 0 ,100% 0, 100% 100%, 0 100%)'
 })
@@ -348,3 +379,6 @@ gsap.to(line19, {
     },
     clipPath: 'polygon(0 0 ,100% 0, 100% 100%, 0 100%)'
 })
+
+
+
