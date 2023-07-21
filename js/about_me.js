@@ -107,42 +107,137 @@ enlarge_circle.forEach((circle)=>{
 })
 
 
-//
-// const bar = document.querySelectorAll('.bar-clip-path')
-// // console.log(bar)
-// const layer_bar = document.querySelector('.wid-orange-clip')
-// bar.forEach((bar)=>{
-//     // console.log(bar)
-//     //for each circle increase the layers --s vale in pixels when hovered
-//     bar.addEventListener('mouseenter',()=>{
-//         console.log('enter' ) 
-//         // change the clip path of th
-//         gsap.to(layer_bar,{
-//             clipPath: 'polygon(0 0 ,100% 0, 100% 100%, 0 100%)',
-//             duration:0.3,
-//             ease: 'sine.out',
-//             delay: 0.3
-//         })
-//
-//         
-//     });
-//     bar.addEventListener('mouseleave',()=>{
-//         // console.log('leave')
-//         
-//         gsap.to(layer_bar,{
-//             clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)',
-//             duration:0.3,
-//             ease: 'sine.out',
-//             delay: 0.3
-//
-//         })
-//     });
-//
-// })
+
+const bar1 = document.querySelector('.hover1')
+const bar2 = document.querySelector('.hover2')
+const bar3 = document.querySelector('.hover3')
+const bar4 = document.querySelector('.hover4')
+const bar5 = document.querySelector('.hover5')
+
+const rec1 = document.querySelector('.rec1')
+const rec2 = document.querySelector('.rec2')
+const rec3 = document.querySelector('.rec3')
+const rec4 = document.querySelector('.rec4')
+const rec5 = document.querySelector('.rec5')
 
 
 
 
+bar1.addEventListener('mouseenter',()=>{
+    gsap.to(rec1,{
+        clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+        duration: 0.5,
+        ease: 'sine.in',
+    })
+    layer.style.setProperty('--s', `0px`)
+
+})
+bar1.addEventListener('mouseleave',()=>{
+    // use gsap to animate the rec clip to the
+    // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    gsap.to(rec1,{
+            clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)',
+            duration: 0.5,
+            ease: 'sine.out',
+            delay: 0
+        })
+    layer.style.setProperty('--s', `13px`)
+})
+
+bar2.addEventListener('mouseenter',()=>{
+    // use gsap to animate the rec clip to the
+    // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    gsap.to(rec2,{
+        clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+        duration: 0.5,
+        ease: 'sine.in.out',
+    })
+    layer.style.setProperty('--s', `0px`)
+
+})
+bar2.addEventListener('mouseleave',()=>{
+    // use gsap to animate the rec clip to the
+    // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    gsap.to(rec2,{
+        clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)',
+        duration: 0.5,
+        ease: 'sine.out',
+        delay: 0
+    })
+    layer.style.setProperty('--s', `13px`)
+})
+
+bar3.addEventListener('mouseenter',()=>{
+    // use gsap to animate the rec clip to the
+    // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    gsap.to(rec3,{
+        clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+        duration: 0.5,
+        ease: 'sine.in.out',
+    })
+    layer.style.setProperty('--s', `0px`)
+
+})
+
+bar3.addEventListener('mouseleave',()=>{
+    // use gsap to animate the rec clip to the
+    // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    gsap.to(rec3,{
+        clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)',
+        duration: 0.5,
+        ease: 'sine.out',
+        delay: 0
+    })
+    layer.style.setProperty('--s', `13px`)
+})
+
+bar4.addEventListener('mouseenter',()=>{
+    // use gsap to animate the rec clip to the
+    // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    gsap.to(rec4,{
+        clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+        duration: 0.5,
+        ease: 'sine.in.out',
+    })
+    layer.style.setProperty('--s', `0px`)
+
+})
+
+bar4.addEventListener('mouseleave',()=>{
+    // use gsap to animate the rec clip to the
+    // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    gsap.to(rec4,{
+        clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)',
+        duration: 0.5,
+        ease: 'sine.out',
+        delay: 0
+    })
+    layer.style.setProperty('--s', `13px`)
+})
+
+bar5.addEventListener('mouseenter',()=>{
+    // use gsap to animate the rec clip to the
+    // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    gsap.to(rec5,{
+        clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+        duration: 0.5,
+        ease: 'sine.in.out',
+    })
+    layer.style.setProperty('--s', `0px`)
+
+})
+
+bar5.addEventListener('mouseleave',()=>{
+    // use gsap to animate the rec clip to the
+    // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    gsap.to(rec5,{
+        clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)',
+        duration: 0.5,
+        ease: 'sine.out',
+        delay: 0
+    })
+    layer.style.setProperty('--s', `13px`)
+})
 
 const line1 = document.querySelector('.line1')
 const line2 = document.querySelector('.line2')

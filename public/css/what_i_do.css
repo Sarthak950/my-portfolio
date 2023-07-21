@@ -11,6 +11,7 @@
 }
 .i-do-text-con{
     width: 100vw;
+/* position: relative; */
 }
 
 .wid-heading{
@@ -34,6 +35,7 @@
     position: absolute;
     top: 0;
     opacity: 0.3;
+    /* background-color: var(--orange); */
 }
 
 .wid-opac{
@@ -41,20 +43,7 @@
     top: 0;
 }
 
-.wid-orange{
-    /* background: var(--orange); */
-    position: absolute;
-    top:0;
-    color: var(--light-brown);
-    /* display: none; */
-    /* background-color: var(--orange); */
-    /* z-index : -10; */
-}
-/* .wid-orange-clip{ */
-/*     /* opacity: 0.1; */ 
-/*     /* background-color: var(--orange); */ 
-/*     /* clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%); */ 
-/* } */
+
 hr{
     margin:0;
     padding: 0;
@@ -86,4 +75,37 @@ hr{
 .wid-hidden-text{
     font-size: 1rem;
 }
+.relative-container{
+    position: relative;
+}
 
+.container-absolute-flex{
+    position: absolute;
+    top:0;
+    background-color: var(--orange);
+    /* left:0;  */
+    display: flex;
+    width: 100vw;
+    box-sizing: border-box;
+    padding-right: 23rem;
+    
+      flex-direction: row;
+    justify-content: space-between;
+    /* align-items: end; */
+}
+
+.rec1{
+    clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+}
+.rec2{
+    clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+}
+.rec3{
+    clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+}
+.rec4{
+    clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+}
+.rec5{
+    clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+}
