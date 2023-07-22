@@ -4,8 +4,8 @@ import LocomotiveScroll from 'locomotive-scroll'
 
 gsap.registerPlugin(ScrollTrigger)
 ScrollTrigger.defaults({
-  scroller: '[data-scroll-container]',
-  markers: false
+    scroller: '[data-scroll-container]',
+    markers: false
 });
 
 var scroll = new LocomotiveScroll( {
@@ -58,7 +58,7 @@ window.addEventListener('mousemove', (e)=>{
 
 })
 const moveLayerFast = (x, y)=>{
-        //do it without gsap
+    //do it without gsap
     layer.style.setProperty('--x', `${x}px`)
     layer.style.setProperty('--y', `${y}px`)
 
@@ -124,23 +124,26 @@ const rec5 = document.querySelector('.rec5')
 
 
 bar1.addEventListener('mouseenter',()=>{
+
+    console.log('enter')
     gsap.to(rec1,{
-        clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
-        duration: 0.5,
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+        duration: 0.3,
         ease: 'sine.in',
     })
     layer.style.setProperty('--s', `0px`)
 
 })
 bar1.addEventListener('mouseleave',()=>{
+    console.log('leave')
     // use gsap to animate the rec clip to the
     // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
     gsap.to(rec1,{
-            clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)',
-            duration: 0.5,
-            ease: 'sine.out',
-            delay: 0
-        })
+        clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)',
+        duration: 0.3,
+        ease: 'sine.out',
+        delay: 0
+    })
     layer.style.setProperty('--s', `13px`)
 })
 
@@ -148,8 +151,9 @@ bar2.addEventListener('mouseenter',()=>{
     // use gsap to animate the rec clip to the
     // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
     gsap.to(rec2,{
-        clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
-        duration: 0.5,
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+
+        duration: 0.3,
         ease: 'sine.in.out',
     })
     layer.style.setProperty('--s', `0px`)
@@ -160,7 +164,7 @@ bar2.addEventListener('mouseleave',()=>{
     // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
     gsap.to(rec2,{
         clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)',
-        duration: 0.5,
+        duration: 0.3,
         ease: 'sine.out',
         delay: 0
     })
@@ -171,8 +175,9 @@ bar3.addEventListener('mouseenter',()=>{
     // use gsap to animate the rec clip to the
     // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
     gsap.to(rec3,{
-        clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
-        duration: 0.5,
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+
+        duration: 0.3,
         ease: 'sine.in.out',
     })
     layer.style.setProperty('--s', `0px`)
@@ -184,7 +189,7 @@ bar3.addEventListener('mouseleave',()=>{
     // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
     gsap.to(rec3,{
         clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)',
-        duration: 0.5,
+        duration: 0.3,
         ease: 'sine.out',
         delay: 0
     })
@@ -195,8 +200,9 @@ bar4.addEventListener('mouseenter',()=>{
     // use gsap to animate the rec clip to the
     // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
     gsap.to(rec4,{
-        clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
-        duration: 0.5,
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+
+        duration: 0.3,
         ease: 'sine.in.out',
     })
     layer.style.setProperty('--s', `0px`)
@@ -208,7 +214,7 @@ bar4.addEventListener('mouseleave',()=>{
     // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
     gsap.to(rec4,{
         clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)',
-        duration: 0.5,
+        duration: 0.3,
         ease: 'sine.out',
         delay: 0
     })
@@ -219,8 +225,9 @@ bar5.addEventListener('mouseenter',()=>{
     // use gsap to animate the rec clip to the
     // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
     gsap.to(rec5,{
-        clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
-        duration: 0.5,
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+
+        duration: 0.3,
         ease: 'sine.in.out',
     })
     layer.style.setProperty('--s', `0px`)
@@ -232,7 +239,7 @@ bar5.addEventListener('mouseleave',()=>{
     // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
     gsap.to(rec5,{
         clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)',
-        duration: 0.5,
+        duration: 0.3,
         ease: 'sine.out',
         delay: 0
     })
