@@ -11,7 +11,7 @@ ScrollTrigger.defaults({
 var scroll = new LocomotiveScroll( {
     el: document.querySelector( '[data-scroll-container]' ),
     smooth: true,
-    multiplier: .3,
+    multiplier: 2.9,
     getDirection: true,
     momentum: true,
 });
