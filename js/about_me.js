@@ -114,12 +114,27 @@ const bar3 = document.querySelector('.hover3')
 const bar4 = document.querySelector('.hover4')
 const bar5 = document.querySelector('.hover5')
 
+const bar6 = document.querySelector('.hover6')
+const bar7 = document.querySelector('.hover7')
+const bar8 = document.querySelector('.hover8')
+const bar9 = document.querySelector('.hover9')
+const bar10 = document.querySelector('.hover10')
+const bar11 = document.querySelector('.hover11')
+
+
+
 const rec1 = document.querySelector('.rec1')
 const rec2 = document.querySelector('.rec2')
 const rec3 = document.querySelector('.rec3')
 const rec4 = document.querySelector('.rec4')
 const rec5 = document.querySelector('.rec5')
 
+const rec6 = document.querySelector('.rec6')
+const rec7 = document.querySelector('.rec7')
+const rec8 = document.querySelector('.rec8')
+const rec9 = document.querySelector('.rec9')
+const rec10 = document.querySelector('.rec10')
+const rec11 = document.querySelector('.rec11')
 
 
 
@@ -234,6 +249,74 @@ bar5.addEventListener('mouseenter',()=>{
 
 })
 
+bar6.addEventListener('mouseleave',()=>{
+    // use gsap to animate the rec clip to the
+    // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    gsap.to(rec6,{
+        clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)',
+        duration: 0.3,
+        ease: 'sine.out',
+        delay: 0,
+    })
+    layer.style.setProperty('--s', `13px`)
+})
+
+
+bar7.addEventListener('mouseleave',()=>{
+    // use gsap to animate the rec clip to the
+    // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    gsap.to(rec7,{
+        clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)',
+        duration: 0.3,
+        ease: 'sine.out',
+        delay: 0
+    })
+    layer.style.setProperty('--s', `13px`)
+})
+bar8.addEventListener('mouseleave',()=>{
+    // use gsap to animate the rec clip to the
+    // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    gsap.to(rec8,{
+        clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)',
+        duration: 0.3,
+        ease: 'sine.out',
+        delay: 0
+    })
+    layer.style.setProperty('--s', `13px`)
+})
+bar9.addEventListener('mouseleave',()=>{
+    // use gsap to animate the rec clip to the
+    // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    gsap.to(rec9,{
+        clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)',
+        duration: 0.3,
+        ease: 'sine.out',
+        delay: 0
+    })
+    layer.style.setProperty('--s', `13px`)
+})
+bar10.addEventListener('mouseleave',()=>{
+    // use gsap to animate the rec clip to the
+    // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    gsap.to(rec10,{
+        clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)',
+        duration: 0.3,
+        ease: 'sine.out',
+        delay: 0
+    })
+    layer.style.setProperty('--s', `13px`)
+})
+bar11.addEventListener('mouseleave',()=>{
+    // use gsap to animate the rec clip to the
+    // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    gsap.to(rec11,{
+        clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)',
+        duration: 0.3,
+        ease: 'sine.out',
+        delay: 0
+    })
+    layer.style.setProperty('--s', `13px`)
+})
 bar5.addEventListener('mouseleave',()=>{
     // use gsap to animate the rec clip to the
     // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
@@ -245,6 +328,17 @@ bar5.addEventListener('mouseleave',()=>{
     })
     layer.style.setProperty('--s', `13px`)
 })
+
+
+
+
+
+
+
+
+
+
+
 
 const line1 = document.querySelector('.line1')
 const line2 = document.querySelector('.line2')

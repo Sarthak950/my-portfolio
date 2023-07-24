@@ -34,11 +34,13 @@
     flex-direction: row;
     align-items: center;
 }
-.social-container1 > span > a, .social-container2 > span > a{
+.social-container1 > span > div, .social-container2 > span > div{
     margin-left: 1rem;
     letter-spacing: 0.1rem;
 }
-
+.social-container1 > span {
+    width: 100%;
+}
 
 .footer-heading{
     font-size: 1.4rem;
@@ -61,4 +63,17 @@
 }
 .footer-social-content{
     color: var(--light-brown);
+}
+
+.social-container > div > span > div {
+    position: relative;
+} 
+.social-container > div > span > div > a {
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+    top:0;
+    left: 0;
 }
