@@ -58,11 +58,12 @@
 
 
 .footer-social-heading{
-    /* font-size: 1.3rem; */
+    font-size: 1rem;
     letter-spacing: .2rem;
 }
 .footer-social-content{
     color: var(--light-brown);
+    letter-spacing: .07rem;
      
 }
 
@@ -82,4 +83,7 @@
     left: 0;
 }
 
+.social-container3 > div {
+    padding-bottom: 0.7rem;
+}
 
