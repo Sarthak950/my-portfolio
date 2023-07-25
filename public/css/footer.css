@@ -63,6 +63,7 @@
 }
 .footer-social-content{
     color: var(--light-brown);
+     
 }
 
 .social-container > div > span > div {
@@ -71,9 +72,14 @@
 .social-container > div > span > div > a {
     position: relative;
 }
+.social-container > div > span > div > a > span {
+    padding-inline: 0.4rem;
+}
 
 .absolute{
     position: absolute;
     top:0;
     left: 0;
 }
+
+

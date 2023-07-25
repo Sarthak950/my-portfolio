@@ -24,7 +24,7 @@
     margin-top: 2rem;
 
     font-size: 7rem;
-    line-height: 6rem;
+    line-height: 6rem;``
     /* margin-inline: 11rem; */
     
 }
@@ -97,8 +97,10 @@ hr{
 .rec1, .rec2, .rec3, .rec4, .rec5,   .rec6, .rec7, .rec8,   .rec9, .rec10, .rec11{
     clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
 }
-
-.hover6, .hover7, .hover8, .hover9, .hover10, .hover11{
-    /* background-color: var(--orange); */
+.rec6, .rec7, .rec8,   .rec9, .rec10, .rec11{
+    background-color: var(--orange);
+    /* padding-inline: 0.3rem; */
     width: 100%;
 }
+
+
