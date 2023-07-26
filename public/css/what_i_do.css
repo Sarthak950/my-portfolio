@@ -24,7 +24,7 @@
     margin-top: 2rem;
 
     font-size: 7rem;
-    line-height: 6rem;``
+    line-height: 6rem;
     /* margin-inline: 11rem; */
     
 }
@@ -94,7 +94,7 @@ hr{
     /* align-items: end; */
 }
 
-.rec1, .rec2, .rec3, .rec4, .rec5,   .rec6, .rec7, .rec8,   .rec9, .rec10, .rec11{
+.rec1, .rec2, .rec3, .rec4, .rec5,   .rec6, .rec7, .rec8,   .rec9, .rec10, .rec11,.rec12, .rec13, .rec14, .rec15, .rec16{
     clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
 }
 .rec6, .rec7, .rec8,   .rec9, .rec10, .rec11{
@@ -103,4 +103,6 @@ hr{
     width: 100%;
 }
 
-
+.padding-right-0{
+    padding-right: 0;
+}
