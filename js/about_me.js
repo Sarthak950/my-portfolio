@@ -16,6 +16,7 @@ var scroll = new LocomotiveScroll( {
     momentum: true,
 });
 
+
 scroll.on( 'scroll', ( instance ) => {
     scroll_delta = instance.scroll.y;
     ScrollTrigger.update();
@@ -41,7 +42,11 @@ let y = 0;
 let y_copy = 0;
 let scroll_dis= 0 ;
 let height = 0;
+
+const image_container = document.getElementById('floating-image')
+console.log(image_container)
 scroll.on('scroll',(instance)=>{
+
 
     height = instance.limit.y;
     scroll_dis = instance.scroll.y;
@@ -68,6 +73,7 @@ const moveLayerFast = (x, y)=>{
         duration:0.7,
         ease: 'sine.out',
     })
+    
 
 }
 const moveLayer = (x, y)=>{
@@ -598,7 +604,7 @@ const line24 = document.querySelector('.line24')
 
 
 let starting = 75;
-let ending = 65;
+let ending = 50;
 gsap.to(line1, {
     scrollTrigger: {
         trigger: line1,
@@ -696,7 +702,7 @@ gsap.to(line20, {
         trigger: line20,
         start: `top ${starting}%`,
         end: `bottom ${ending}%`,
-        scrub: true,
+        scrub: 0.3,
         toggleActions: 'restart none none none',
     },
     clipPath: 'polygon(0 0 ,100% 0, 100% 100%, 0 100%)'
@@ -750,7 +756,7 @@ gsap.to(line10, {
     scrollTrigger: {
         trigger: line10,
         start: `top ${starting2}%`,
-        end: `top ${ending2 -100}%`,
+        end: `top ${ending2}%`,
         scrub: 0.3,
         toggleActions: 'restart none none none',
     },
@@ -859,8 +865,6 @@ gsap.to(line19, {
     },
     clipPath: 'polygon(0 0 ,100% 0, 100% 100%, 0 100%)'
 })
-
-
 
 
 

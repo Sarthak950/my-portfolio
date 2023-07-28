@@ -19,7 +19,7 @@ gltfloader.load(
     //called when resource is loaded
     function(gltf){
         scene.add(gltf.scene);
-        console.log('loaded')
+        // console.log('loaded')
         model = gltf.scene.children[0];
         loaded = 1;
         gltf.scene; // THREE.Group

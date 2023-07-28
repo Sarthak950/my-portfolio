@@ -5,7 +5,7 @@ body, html{
     background-color: var(--body-bg);
     width:100vw;
     height:100vh;
-    overflow-x:hidden;
+    /* overflow-x:hidden; */
     box-sizing:border-box;
 
 
@@ -81,4 +81,5 @@ a{
     left:var(--x );
     transform:translate(-50%, -50%);
 }
+
 
