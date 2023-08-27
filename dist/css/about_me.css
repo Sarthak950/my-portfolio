@@ -1,0 +1,84 @@
+.orange-heighlight{
+    color:var(--orange);
+}
+
+
+.about-me{
+    min-height: 100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    font-family: 'avant-garde';
+
+    color: var(--dark-brown);
+
+    box-sizing:border-box;
+    padding-left:11rem;
+    position: relative;
+    /* margin-right: 30vw; */
+    
+}
+
+.about-me-heading{
+    font-size:1.2rem;
+    letter-spacing: .5rem;
+}
+
+
+.about-me-text{
+    font-size:4.7rem;
+    letter-spacing:0rem;
+    margin:0;
+    line-height: 4.7rem;
+}
+
+.abt-me-btm{
+    color: black;
+}
+
+
+.about-me-slid-container{
+    position:relative;
+}
+
+
+
+.abt-me-trans-text{
+    position:absolute;
+    top:0;
+    opacity: 0.3;
+}
+
+
+.line{
+    clip-path: polygon(0 0, 0 0, 0 100%,0 100%);
+}
+
+
+
+
+
+.for-mob > p{
+    font-size: 4rem;
+    line-height: 4rem;
+}
+
+
+
+@media only screen and (max-width: 950px) {
+    .for-desk{
+        display: none;
+    }
+
+    .about-me{
+        margin-left:8rem;
+    }
+}
+@media only screen and (min-width: 950px) {
+    .for-mob{
+        display: none;
+    }
+}
+
+
