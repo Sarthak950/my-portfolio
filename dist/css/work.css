@@ -16,7 +16,7 @@
 
 .work-text{
     
-    font-size:4.7rem;
+    font-size:4.5rem;
     letter-spacing:0rem;
     margin:0;
     line-height: 4.7rem;
@@ -35,4 +35,8 @@
 }
 .color-black{
     color:black;
+}
+
+.innovationrdec {
+    min-width: 100vw;
 }
