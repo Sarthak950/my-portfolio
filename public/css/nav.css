@@ -37,7 +37,7 @@
 
 .top-nav-items{
     margin:0;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-family: 'avant-garde';
 }
 
@@ -49,7 +49,6 @@
     height:1rem;
     clip-path:inset(0);
 }
-
 
 
 
@@ -92,7 +91,7 @@
         
     color: var(--dark-brown);
     font-family: 'avant-garde';  
-    font-size:0.8rem;
+    font-size: 1rem;
     letter-spacing:0.1rem;
 }
 .sound-btn{

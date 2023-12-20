@@ -1,5 +1,5 @@
 .what-i-do-con{
-    min-height: 100vh;
+    min-height: 70vh;
     width: 100vw;
     color: var(--dark-brown);
     font-family: 'avant-garde';
@@ -69,6 +69,8 @@ hr{
     justify-content: space-between;
    
     padding-right: 23rem;
+
+    min-width: 100vw;
 
 }
 

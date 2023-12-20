@@ -3,22 +3,34 @@ import gsap from 'gsap'
 
 const sound_btn = document.getElementById('sound-click-container')
 
+
+
+const audio = document.getElementById('audio-site')
+
 sound_btn.addEventListener('click', () => {
-  
+
     const time = 0.5
 
-
     const off = document.getElementById('sound-off')
-    
+
     const on = document.getElementById('sound-on')
-   
+
     if(off.classList.contains('active')){
         off.classList.remove('active')
         on.classList.add('active')
- 
-       gsap.to('#sound-on', {duration:0.5, ease:'power4.out', transform:'translateY(0%)' })
+
+        // add muted to the audio element
+
+        audio.muted = false
+
+        gsap.to('#sound-on', {duration:0.5, ease:'power4.out', transform:'translateY(0%)' })
         gsap.to('#sound-off', {duration:0.5, ease:'power4.out', transform:'translateY(0%)' })
     }else{
+
+
+        // remove muted to the audio 
+        audio.muted = true 
+
         off.classList.add('active')
         on.classList.remove('active')
         gsap.to('#sound-on', {duration:0.5, ease:'power4.out', transform:'translateY(-100%)' })
@@ -61,7 +73,7 @@ about.addEventListener('mouseout',()=>{
 })
 
 work.addEventListener('mouseover', ()=>{
-        gsap.to('#work-rest',{
+    gsap.to('#work-rest',{
         duration:0.5,
         ease:'power4.out',
         transform:'translateY(-100%)'
@@ -73,7 +85,7 @@ work.addEventListener('mouseover', ()=>{
     })
 })
 work.addEventListener('mouseout', ()=>{
-        gsap.to('#work-rest',{
+    gsap.to('#work-rest',{
         duration:0.5,
         ease:'power4.out',
         transform:'translateY(0%)'
@@ -86,7 +98,7 @@ work.addEventListener('mouseout', ()=>{
 })
 
 contact.addEventListener('mouseover',()=>{
- gsap.to('#contact-rest',{
+    gsap.to('#contact-rest',{
         duration:0.5,
         ease:'power4.out',
         transform:'translateY(-100%)'
@@ -100,19 +112,14 @@ contact.addEventListener('mouseover',()=>{
 
 contact.addEventListener('mouseout',()=>{
     gsap.to('#contact-rest',{
-            duration:0.5,
-            ease:'power4.out',
-            transform:'translateY(0%)'
-        })
-        gsap.to('#contact-current',{
-            duration:0.5,
-            ease:'power4.out',
-            transform:'translateY(0%)'
-        })
+        duration:0.5,
+        ease:'power4.out',
+        transform:'translateY(0%)'
+    })
+    gsap.to('#contact-current',{
+        duration:0.5,
+        ease:'power4.out',
+        transform:'translateY(0%)'
+    })
 })
 
-
-
-
-// const about_sec = document.getElementById('About')
-// about_sec.addEventListener('')

@@ -17,6 +17,7 @@
     "locomotive-scroll": "^4.1.4",
     "netlify-cli": "^15.8.1",
     "smooth-scrollbar": "^8.8.4",
+    "split-type": "^0.3.4",
     "three": "^0.154.0"
   }
 }

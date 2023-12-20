@@ -11,7 +11,7 @@ ScrollTrigger.defaults({
 var scroll = new LocomotiveScroll( {
     el: document.querySelector( '[data-scroll-container]' ),
     smooth: true,
-    multiplier: 0.7,
+    multiplier: 0.4,
     getDirection: true,
     momentum: true,
 });
@@ -73,7 +73,7 @@ const moveLayerFast = (x, y)=>{
         duration:0.7,
         ease: 'sine.out',
     })
-    
+
 
 }
 const moveLayer = (x, y)=>{
@@ -157,8 +157,6 @@ const rec16  = document.querySelector('.rec16')
 
 
 bar1.addEventListener('mouseenter',()=>{
-
-    console.log('enter')
     gsap.to(rec1,{
         clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
         duration: 0.3,
@@ -168,7 +166,6 @@ bar1.addEventListener('mouseenter',()=>{
 
 })
 bar1.addEventListener('mouseleave',()=>{
-    console.log('leave')
     // use gsap to animate the rec clip to the
     // clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
     gsap.to(rec1,{
@@ -869,3 +866,115 @@ gsap.to(line19, {
 
 
 
+
+// nav btn 
+const about_sec = document.getElementsByClassName('about-me')[0]
+const about_btn = document.getElementById('about-container')
+
+about_btn.addEventListener('click', () => {
+    scroll.scrollTo(about_sec)
+})
+
+const work_sec = document.getElementsByClassName('work-div-con')[0]
+const work_btn = document.getElementById('work-container')
+
+work_btn.addEventListener('click', () => {
+    scroll.scrollTo(work_sec)
+})
+
+const contact_con = document.getElementsByClassName('footer')[0]
+const contact_btn = document.getElementById('contact-container')
+
+contact_btn.addEventListener('click', () => {
+    scroll.scrollTo(contact_con)
+})
+
+
+const observer1 = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            gsap.to('#about-rest',{
+                duration:0.5,
+                ease:'power4.out',
+                transform:'translateY(-100%)'
+            })
+            gsap.to('#about-current',{
+                duration:0.5,
+                ease:'power4.out',
+                transform:'translateY(-100%)'
+            })
+        } else {
+
+            gsap.to('#about-rest',{
+                duration:0.5,
+                ease:'power4.out',
+                transform:'translateY(0%)'
+            })
+            gsap.to('#about-current',{
+                duration:0.5,
+                ease:'power4.out',
+                transform:'translateY(0%)'
+            })
+
+        }
+    });
+});
+observer1.observe(about_sec);
+
+const observer2 = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            gsap.to('#work-rest',{
+                duration:0.5,
+                ease:'power4.out',
+                transform:'translateY(-100%)'
+            })
+            gsap.to('#work-current',{
+                duration:0.5,
+                ease:'power4.out',
+                transform:'translateY(-100%)'
+            })
+        } else {
+            gsap.to('#work-rest',{
+                duration:0.5,
+                ease:'power4.out',
+                transform:'translateY(0%)'
+            })
+            gsap.to('#work-current',{
+                duration:0.5,
+                ease:'power4.out',
+                transform:'translateY(0%)'
+            })
+        }
+    });
+});
+observer2.observe(work_sec);
+
+const observer3 = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            gsap.to('#contact-rest',{
+                duration:0.5,
+                ease:'power4.out',
+                transform:'translateY(-100%)'
+            })
+            gsap.to('#contact-current',{
+                duration:0.5,
+                ease:'power4.out',
+                transform:'translateY(-100%)'
+            })
+        } else {
+            gsap.to('#contact-rest',{
+                duration:0.5,
+                ease:'power4.out',
+                transform:'translateY(0%)'
+            })
+            gsap.to('#contact-current',{
+                duration:0.5,
+                ease:'power4.out',
+                transform:'translateY(0%)'
+            })
+        }
+    });
+});
+observer3.observe(contact_con);

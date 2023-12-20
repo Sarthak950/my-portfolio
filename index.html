@@ -6,7 +6,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="icon " type="image/png " href="/images/apple-touch-icon.png">
+        <link rel="icon " type="image/png " href="./public/images/favicon-32x32.png">
+
 
         <link href="/css/index.css" rel="stylesheet" />
         <link href="/css/nav.css" rel="stylesheet">
@@ -24,10 +25,16 @@
 
     <body  >
 
+        <!-- <embed src="/public/assets/audio-site.mp3" loop="true" autostart="true" width="0" height="0" style="display: none;" />  -->
+
+        <audio id="audio-site" autoplay loop muted  style="display: none;">
+            <source src="public/assets/audio-site.mp3" type="audio/mp3">
+        </audio>
+
 
         <div class="nav-container">
             <div class="top-nav">
-                <a href="/">
+                <a href="#" class="logo-svg-con">
                     <svg class="logo-svg" width="64" height="64" viewBox="0 0 64 64" fill="none"
                         xmlns="http://www.w3.org/2000/svg" class="svg" viewbox_="0 0 NaN NaN">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -39,21 +46,21 @@
                 </a>
 
                 <div class="top-nav-item">
-                    <a class="nav-items-link" id="about" href="#About">
+                    <a class="nav-items-link" id="about">
                         <div class="top-nav-double-container" id="about-container">
                             <p class="top-nav-items rest" id="about-rest">ABOUT</p>
                             <p class="top-nav-items current" id="about-current">ABOUT</p>
                         </div>
                     </a>
 
-                    <a class="nav-items-link" id="work" href="#work">
+                    <a class="nav-items-link" id="work">
                         <div class="top-nav-double-container" id="work-container">
                             <p class="top-nav-items rest" id="work-rest">WORK</p>
                             <p class="top-nav-items current" id="work-current">WORK</p>
                         </div>
                     </a>
 
-                    <a class="nav-items-link" id="contact" href="#contact">
+                    <a class="nav-items-link" id="contact" >
                         <div class="top-nav-double-container" id="contact-container">
                             <p class="top-nav-items rest" id="contact-rest">CONTACT</p>
                             <p class="top-nav-items current" id="contact-current">CONTACT</p>
@@ -133,19 +140,19 @@
 
             <div id="top-layer">
                 <div id="About">
-                    <section data-scroll data-scroll-speed="9" class="about-bg-img"></section>
+                    <section data-scroll data-scroll-speed="15" class="about-bg-img"></section>
                     <div class="hero-text" id="hero-text-container">
                         <div class="circle-enlarge hero-text">
 
-                            <span class=" hero-name"> SARTHAK SHARMA </span>
+                            <span id="hero-text-1" class=" hero-name"> SARTHAK SHARMA </span>
 
-                            <div class=" hero-text-white">MAKING</div>
+                            <div id="hero-text-2" class=" hero-text-white">MAKING</div>
 
-                            <div class=" hero-text-orange">GOOD</div>
-                            <div class="hero-text-orange">WEBSITES</div>
+                            <div id="hero-text-3" class=" hero-text-orange">GOOD</div>
+                            <div id="hero-text-4" class="hero-text-orange">WEBSITES</div>
 
-                            <div class=" hero-text-white">SINCE</div>
-                            <div class=" hero-text-white">2021</div>
+                            <div id="hero-text-5" class=" hero-text-white">SINCE</div>
+                            <div  id="hero-text-6" class=" hero-text-white">2021</div>
                         </div>
                     </div>
                 </div>
@@ -943,13 +950,13 @@
         var scroll_delta = 0;
         window.onbeforeunload = function () { window.scrollTo(0,0); };
         </script>
-        <script type="module" src="/js/index.js"></script>
+        <script type="module" src="/js/main.js"></script>
         <script type="module" src="/earth_three.js"></script>
         <script type="module" src="/mouse_three.js"></script>
         <script type="module" src="/cup_three.js"></script>
         <script type="module" src="/js/about_me.js"></script>
         <script type="module" src="/js/nav.js"></script>
-        <script type="module" src="test.js"></script>
+        <!-- <script type="module" src="test.js"></script> -->
     </body>
 
 </html>

@@ -25,6 +25,13 @@
     line-height: 84%;
     transform: translateY( -3%);
     
+    /* overflow: hidden; */
+
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hero-text > div {
+    overflow: hidden;
 }
 
 
@@ -52,9 +59,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-
-    background-image: url("../images/nebula.png");
+    background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.9) 90%), url("../images/nebula.png");
     background-size: cover;
-    filter: opacity(0.25);
-
 }
+

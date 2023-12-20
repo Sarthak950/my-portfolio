@@ -4,4 +4,4 @@ node_modules/
 test.html
 test.js
 smooth_scroll.js
-
+dist/

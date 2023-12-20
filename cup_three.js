@@ -61,6 +61,14 @@ const SpotLight2 = new THREE.SpotLight(0xffffff, 0.5);
 SpotLight2.position.set(0, 2, -3);
 scene.add(SpotLight2)
 
+const PointLight = new THREE.PointLight(0xffffff, 0.5);
+PointLight.position.set(5, 4, -8);
+scene.add (PointLight)
+
+
+
+
+
 //camera
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
 scene.add(camera);
@@ -105,8 +113,9 @@ function animate() {
     controls.update();
 
     if(loaded){
-        model.rotation.y = scroll_delta/300;
-    
+        model.rotation.y = scroll_delta/600;
+        model.rotation.z = scroll_delta/3000;
+        model.rotation.x = -scroll_delta/3000;
     // console.log(model.rotation)
     }
 
