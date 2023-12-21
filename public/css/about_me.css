@@ -4,13 +4,12 @@
 
 
 .about-me{
-    min-height: 100vh;
+    height: 100vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
-
+ 
     font-family: 'avant-garde';
-
     color: var(--dark-brown);
 
     box-sizing:border-box;

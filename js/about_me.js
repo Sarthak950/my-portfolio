@@ -11,7 +11,7 @@ ScrollTrigger.defaults({
 var scroll = new LocomotiveScroll( {
     el: document.querySelector( '[data-scroll-container]' ),
     smooth: true,
-    multiplier: 0.4,
+    multiplier: 0.3,
     getDirection: true,
     momentum: true,
 });
@@ -44,7 +44,6 @@ let scroll_dis= 0 ;
 let height = 0;
 
 const image_container = document.getElementById('floating-image')
-console.log(image_container)
 scroll.on('scroll',(instance)=>{
 
 
@@ -94,12 +93,14 @@ enlarge_circle.forEach((circle)=>{
     //for each circle increase the layers --s vale in pixels when hovered
     circle.addEventListener('mouseenter',()=>{
         // console.log('enter', circle )
-        gsap.to(layer,{
-            '--s': '220px',
-            duration:0.3,
-            ease: 'sine.out',
-            delay: 0
-        })
+        if (can_scale){
+            gsap.to(layer,{
+                '--s': '220px',
+                duration:0.3,
+                ease: 'sine.out',
+                delay: 0
+            })
+        }
     });
     circle.addEventListener('mouseleave',()=>{
         gsap.to(layer,{

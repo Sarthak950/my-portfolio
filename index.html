@@ -6,7 +6,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="icon " type="image/png " href="./public/images/favicon-32x32.png">
+        <link rel="icon " type="image/png " href="/images/favicon-32x32.png">
 
 
         <link href="/css/index.css" rel="stylesheet" />
@@ -20,21 +20,37 @@
         <link rel="stylesheet" href="/css/three_js.css">
         <link rel="stylesheet" href="/css/footer.css">
         <link rel="stylesheet" href="/css/svg.css">
+        <link rel="stylesheet"  href="/css/preloader.css">
 
     </head>
 
     <body  >
 
-        <!-- <embed src="/public/assets/audio-site.mp3" loop="true" autostart="true" width="0" height="0" style="display: none;" />  -->
-
-        <audio id="audio-site" autoplay loop muted  style="display: none;">
-            <source src="public/assets/audio-site.mp3" type="audio/mp3">
+        <audio  id="audio-site" autoplay loop muted  style="display: none;">
+            <source src="/assets/audio-site.mp3" type="audio/mp3">
         </audio>
+
+        <div id="preloader">
+            <svg id="preloader-svg" class="logo-svg" width="64" height="64" viewBox="0 0 64 64" fill="none"
+                xmlns="http://www.w3.org/2000/svg" class="svg" viewbox_="0 0 NaN NaN">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M53.4123 56.0001C59.9131 50.12 64 41.602 64 32.1258C64 14.3832 49.6731 0 32 0C14.3269 0 0 14.3832 0 32.1258C0 41.2108 3.75642 49.4151 9.79504 55.2585L21.5957 13.0511L27.5053 25.8028H31.5H35.4947L41.4043 13.0511L53.4123 56.0001Z"
+                    fill="#B7AB98"></path>
+                <ellipse cx="26.1333" cy="37.4132" rx="2.13333" ry="2.14172" fill="#B7AB98"></ellipse>
+                <ellipse cx="37.1333" cy="37.4132" rx="2.13333" ry="2.14172" fill="#B7AB98"></ellipse>
+            </svg>
+
+            <div class="preload-container">
+
+                <h1 id="counter">0</h1>
+                <button id="preloader-btn" type="button">START</button>
+            </div>
+        </div>
 
 
         <div class="nav-container">
             <div class="top-nav">
-                <a href="#" class="logo-svg-con">
+                <a  class="logo-svg-con">
                     <svg class="logo-svg" width="64" height="64" viewBox="0 0 64 64" fill="none"
                         xmlns="http://www.w3.org/2000/svg" class="svg" viewbox_="0 0 NaN NaN">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -934,10 +950,9 @@
                     </div>
 
                 </footer>
-                
+
 
             </div>
-
 
         </section>
 
@@ -949,14 +964,16 @@
         <script>
         var scroll_delta = 0;
         window.onbeforeunload = function () { window.scrollTo(0,0); };
+        var can_scale = false;   
         </script>
+    
         <script type="module" src="/js/main.js"></script>
         <script type="module" src="/earth_three.js"></script>
         <script type="module" src="/mouse_three.js"></script>
         <script type="module" src="/cup_three.js"></script>
         <script type="module" src="/js/about_me.js"></script>
         <script type="module" src="/js/nav.js"></script>
-        <!-- <script type="module" src="test.js"></script> -->
+
     </body>
 
 </html>
